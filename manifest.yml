@@ -1,0 +1,13 @@
+---
+declared-services:
+  rest-mongo:
+    label: mongodb
+    plan: 100
+applications:
+- name:    restconFusion
+  host:    restconFusion
+  memory:  128M
+  services:
+  - mebo-mongo
+  env:
+    NODE_ENV: cloud-foundry
